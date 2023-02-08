@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xidmetler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/third.css' %}">
+</head>
+<body>
+
+  <span class="menum">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </span>
+
+    <header>
+        <div class="header2">
+      <ul class="nav justify-content-center">
+        <button type="button" class="btn btn-primary" id="button" >
+          <a class="nav-link active" aria-current="page" href="{% url 'anasahifa' %}">ANA SƏHIFƏ</a></button>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'hakkimda' %}">HAQQIMDA</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">XİDMƏTLƏR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'iş' %}">İŞ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'agreement' %}">ANLAYIŞLAR</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'elaqe' %}">ƏLAQƏ</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link qoshul" href="{% url 'komanda' %}">KOMANDAMIZA QOŞULUN</a>
+            </li>
+        </ul>
+      </div>
+      </header>
+      <div  class="xidmet">
+        <div class="xidmetler">
+            <h1 class="xid">XİDMƏTLƏR</h1>
+            
+        </div>
+      </div>
+      <section class="data">
+      <div class="invest">
+          {% for i in servc %}
+        <h3 class="your">{{i.name}}</h3>
+        <p class="GES">{{i.about}}</p>
+      </div>
+      <img src="{{i.image.url}}" alt="" class="pict">
+           {% endfor %}
+        
+    </section>
+    
+    <section class="bigger">
+      <div class="asses">
+      <h1 style="margin-bottom: 20px;" class="assess">{{title1.name}}</h1>
+      <p class="under">{{title1.description}}</p>
+    </div>
+    <section class="akord">
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <div class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <div class="blue"></div>
+                  <h1 class="itemmi">{{servc2.subject}}</h1>
+                </button>
+              </div>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{{servc2.description}}</div>
+              </div>
+
+            </div>
+
+            <div class="accordion-item">
+              
+              <h2 class="accordion-header" id="flush-headingTwo">
+                
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <div class="blue"></div>
+                  <h1 class="itemmi">{{servc2a.subject}}</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{{servc2a.description}}</div>
+              </div>
+            </div>
+            
+            <div class="accordion-item">
+              
+              <h2 class="accordion-header" id="flush-headingThree">
+                
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <div class="blue"></div>
+                  <h1 class="itemmi">{{servc2b.subject}}</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{{servc2b.description}}</div>
+              </div>
+            </div>
+      
+            <div class="accordion-item">
+              
+              <h2 class="accordion-header" id="flush-headingFour">
+                
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  <div class="blue"></div>
+                  <h1 class="itemmi">{{servc2c.subject}}</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{{servc2c.description}}</div>
+              </div>
+            </div>
+      
+           <div class="accordion-item">
+
+              <h2 class="accordion-header" id="flush-headingFive">
+
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  <div class="blue"></div>
+                  <h1 class="itemmi">{{servclast.subject}}</h1>
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">{{servclast.description}}</div>
+              </div>
+            </div>
+
+          <hr class="reach">
+            </section>
+            
+        </section>
+        
+
+
+
+
+        <section class="bigger">
+          <div class="asses">
+          <h1 style="margin-bottom: 20px;" class="assess">{{title2.name}}</h1>
+          <p class="under">{{title2.description}}</p>
+        </div>
+        <section class="akord">
+          
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <div class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      <div class="blue"></div>
+                      <h1 class="itemmi">{{servc3.subject}}</h1>
+                    </button>
+                  </div>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{servc3.description}}</div>
+                  </div>
+                  
+                </div>
+    
+                <div class="accordion-item">
+                  
+                  <h2 class="accordion-header" id="flush-headingSeven">
+                    
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      <div class="blue"></div>
+                      <h1 class="itemmi">{{servc3a.subject}}</h1>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{servc3a.description}}</div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  
+                  <h2 class="accordion-header" id="flush-headingEight">
+                    
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                      <div class="blue"></div>
+                      <h1 class="itemmi">{{servc3b.subject}}</h1>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{servc3b.description}}</div>
+                  </div>
+                </div>
+          
+                <div class="accordion-item">
+                  
+                  <h2 class="accordion-header" id="flush-headingNine">
+                    
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseNine" aria-expanded="false" aria-controls="flush-collapseNine">
+                      <div class="blue"></div>
+                      <h1 class="itemmi">{{servc3c.subject}}</h1>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseNine" class="accordion-collapse collapse" aria-labelledby="flush-headingNine" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{servc3c.description}}</div>
+                  </div>
+                </div>
+          
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTen">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTen" aria-expanded="false" aria-controls="flush-collapseTen">
+                      <div class="blue"></div>
+                      <h1 class="itemmi">{{servclast1.subject}}</h1>
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTen" class="accordion-collapse collapse" aria-labelledby="flush-headingTen" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">{{servclast1.description}}</div>
+                  </div>
+                </div>
+              </div>
+              <hr class="reach">
+                </section>
+                
+            </section>
+       
+
+
+         
+            <section class="secondbigger">
+              <div class="asses">
+              <h1 style="margin-bottom: 20px;" class="assess"s>{{title3.name}}</h1>
+              <p class="under">{{title3.description}}</p>
+            </div>
+            <section class="akord">
+              
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <div class="accordion-header" id="flush-headingEleven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEleven" aria-expanded="false" aria-controls="flush-collapseEleven">
+                          <div class="blue"></div>
+                          <h1 class="itemmi">{{servc4.subject}}</h1>
+                        </button>
+                      </div>
+                      <div id="flush-collapseEleven" class="accordion-collapse collapse" aria-labelledby="flush-headingEleven" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{servc4.description}}</div>
+                      </div>
+                      
+                    </div>
+        
+                    <div class="accordion-item">
+                      
+                      <h2 class="accordion-header" id="flush-headingTwelve">
+                        
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                          <div class="blue"></div>
+                          <h1 class="itemmi">{{servc4a.subject}}</h1>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-headingTwelve" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{servc4a.description}}</div>
+                      </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                      
+                      <h2 class="accordion-header" id="flush-headingThirteen">
+                        
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThirteen" aria-expanded="false" aria-controls="flush-collapseThirteen">
+                          <div class="blue"></div>
+                          <h1 class="itemmi">{{servc4b.subject}}</h1>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThirteen" class="accordion-collapse collapse" aria-labelledby="flush-headingThirteen" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{servc4b.description}}</div>
+                      </div>
+                    </div>
+              
+                    <div class="accordion-item">
+                      
+                      <h2 class="accordion-header" id="flush-headingFourteen">
+                        
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFourteen" aria-expanded="false" aria-controls="flush-collapseFourteen">
+                          <div class="blue"></div>
+                          <h1 class="itemmi">{{servc4c.subject}}</h1>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFourteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFourteen" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{servc4c.description}}</div>
+                      </div>
+                    </div>
+              
+    <div class="accordion-item">
+
+                      <h2 class="accordion-header" id="flush-headingFifteen">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFifteen" aria-expanded="false" aria-controls="flush-collapseFifteen">
+                          <div class="blue"></div>
+                          <h1 class="itemmi">{{servc4c.subject}}</h1>
+                        </button>
+                      </h2>
+                      <div id="flush-collapseFifteen" class="accordion-collapse collapse" aria-labelledby="flush-headingFifteen" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{servc4c.description}}</div>
+                      </div>
+                    </div>
+                
+                    </section>
+                    
+                </section> 
+                
+                
+                         {% for i in selector %}
+
+                    <h3 class="selection">{{i.title}}</h3>
+                        {% endfor %}
+                </div>
+
+                </section>
+                <div class="images">
+                    {% for i in selector %}
+                  <img src="{{i.logo1.url}}" alt="merkez" class="merkez">
+                  <img src="{{i.logo2.url}}" alt="gerb" class="gerb">
+                  <img src="{{i.logo3.url}}" alt="Nestle" class="nestle">
+                  <img src="{{i.logo4.url}}" alt="image" class="20png">
+                  <img src="{{i.logo5.url}}" alt="Ever" class="ever">
+                  <img src="{{i.logo6.url}}" alt="Silkway" class="silkway">
+                  <img src="{{i.logo7.url}}" alt="Berlin" class="berlin">
+                    {% endfor %}
+                </div>
+              <footer class="footer1">
+              <section class="footsection">
+               <h3 class="latest">Be in the know on the latest ESG trends.
+              </h3>
+              </section>
+              <section class="footsection2">
+                 <form method="post" class="formn" action="{% url 'xidmalar' %}">
+                  {% csrf_token %}
+                  <div class ="alert alert-danger" role="alert">
+                    {{error}}
+                  </div>
+                  <input type="email" name="Email" class="input1"  style="width: 669px; height: 56px;"placeholder="info@2dlogistics.az">
+                 <button class="btn btn-primary"  role="button" id="button7">SUBSCRIBE</button>
+                 </form>
+              <div class="socials">
+                {% for i in social %}
+      
+                <a href="{{i.facebook}}" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href ="{{i.instagram}}" class="icons"><i class="fa-brands fa-instagram"></i></a>
+                <a href="{{i.linkedin}}" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="{{i.whatsapp}}" class="icons"><i class="fa-brands fa-whatsapp"></i></a>
+                {% endfor %} 
+              </div> 
+              </section>
+                </footer>
+
+                <script>
+                  menum = document.querySelector(".menum");
+                  menum.onclick = function() {
+                    header2 = document.querySelector(".header2");
+                    header2.classList.toggle("active");
+                  }
+                </script>
+                    <script
+                    src="https://code.jquery.com/jquery-3.6.3.min.js"
+                    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+                    crossorigin="anonymous"></script>
+                      <script src="https://cdn.jsd
+                      elivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+                
+              
+    </body>
+    </html>
+    

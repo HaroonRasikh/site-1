@@ -1,0 +1,21 @@
+<form action ="{% url 'alaqa' %}" method ='post'>
+
+    {% csrf_token %}
+<p> User name: </p>
+<input type = 'text' name = 'Name' />
+<p> email </p>
+<input type = 'email' name = 'Email'/> <br/>
+<p> subject </p>
+
+<p> message </p>
+<textarea type = 'text' name = 'Message'>
+
+</textarea><br/>
+<input type = 'submit' />
+
+</form>
+<center>
+    {% if set %}
+    your message has sent thank you
+    {% endif %}
+</center>

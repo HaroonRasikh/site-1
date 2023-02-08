@@ -1,0 +1,40 @@
+
+html{
+    min-height: 100%;
+    background: linear-gradient(-135deg, #807f7f, #2c2c2c);
+}
+a{
+    text-decoration: none;
+    color: rgb(255 255 255);
+    border: blue 1px;
+    display: table-cell;
+    width: 100px;
+    height: 30px;
+    text-align-last: center;
+    padding-top: 10px;
+    background: #7a37ff;
+}
+a:hover{
+    width: 80px;
+    text-align: center;
+    color: black;
+    background: white;
+    transition:0.1s;
+    border-radius: 5px;
+}
+.sectioner{
+    width: 100%;
+}
+span:hover{
+    margin-left: 10px;
+    transition: 0.1s;
+}
+h1,p{
+    color: white;
+    font-family: sans-serif;
+    margin: 2%;
+}
+header{
+    margin-top: 15%;
+    text-align: center;
+}

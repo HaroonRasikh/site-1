@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anlayis2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/anlayis2.css' %}">
+</head>
+<body>
+  <header>
+    <div class="header2">
+  <ul class="nav justify-content-center">
+    <button type="button" class="btn btn-primary" id="button" >
+      <a class="nav-link active" aria-current="page" href="{% url 'anasahifa' %}">ANA SƏHIFƏ</a></button>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{% url 'hakkimda' %}">HAQQIMDA</a>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{% url 'xidmalar' %}">XİDMƏTLƏR</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'iş' %}">İŞ</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'agreement' %}">ANLAYIŞLAR</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'elaqe' %}">ƏLAQƏ</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link qoshul" href="{% url 'komanda' %}">KOMANDAMIZA QOŞULUN</a>
+        </li>
+    </ul>
+  </div>
+  </header>
+      <div  class="xidmet">
+        <div class="xidmetler">
+            <h1 class="xid">ANLAYIŞLAR</h1>
+            
+        </div>
+      </div>
+      <section class="ish2">
+        <h2>{{posts.date}}</h2>
+        <h2>{{posts.title}}</h2>
+        <div class="btn-group">
+            <a href="{{posts.facebook}}" class="btn btn-primary active" aria-current="page"> <div class="bookk"><img src="{% static 'images/facebook-f.png' %}" alt="" class="imgs"> </div> Facebook</a>
+            <a href="{{posts.twitter}}" class="btn btn-primary coloring"><img src="{% static 'images/Vector (1).png' %}" alt="" class="twit"> Twitter </a>
+            <a href="{{posts.linkedin}}" class="btn btn-primary boombap"><div class="kit"><img src="{% static 'images/linkedin-in.png' %}" alt="" class="linkedin"> </div>Linkedin </a>
+            
+          </div>
+      </section>
+      <section class="bilboard">
+        <img src="{{posts.image.url}}" class="img-fluid" alt="...">
+        <p class="paragraph">{{posts.description|safe}}</p>
+      </section>
+
+      <div class="footing">
+        <span class="son">
+        <h1 class="xeberdar">Ən son ESG tendensiyalarından xəbərdar olun.</h1>
+          <p class="trend">Ən son trendləri birbaşa gələnlər qutunuza çatdırın.</p>
+          <span class="putlar">
+            <form method="post" class="formn" action="{% url 'agreement' %}">
+              {% csrf_token %}
+              <div class ="alert alert-danger" role="alert">
+                {{error}}
+              </div>
+           <input type="email" name="Email" class="input1"  style="width: 669px; height: 56px;"placeholder="info@2dlogistics.az">
+           <button class="btn btn-primary"  role="button" id="button7">SUBSCRIBE</button>
+          </form>
+</span>
+        </span>
+      </div>
+      <section class="footerden evvel">
+        {% for i in member %}
+       
+
+        <div class="cafex"><img src="{{i.image.url}}" alt="" class="shekil">
+          <ul class="melendez">
+          <h4 class="viktor">{{i.name}}
+          </h4>
+          <p class="hasib">{{i.description}}</p>
+        </ul>
+       </div>
+         {% endfor %}
+     
+      
+      </section>
+      <div class="axiri">
+        {% for i in selector %}
+        <h3 class="selection">{{i.title}}</h3>
+          {% endfor %}
+    </div> 
+    </section>
+    <div class="images">
+      {% for i in selector %}
+      <img src="{{i.logo1.url}}" alt="merkez" class="merkez">
+      <img src="{{i.logo2.url}}" alt="gerb" class="gerb">
+      <img src="{{i.logo3.url}}" alt="Nestle" class="nestle">
+      <img src="{{i.logo4.url}}" alt="image" class="20png">
+      <img src="{{i.logo5.url}}" alt="Ever" class="ever">
+      <img src="{{i.logo6.url}}" alt="Silkway" class="silkway">
+      <img src="{{i.logo7.url}}" alt="Berlin" class="berlin">
+      {% endfor %}
+    </div>
+    <footer class="footer1">
+    <section class="footsection">
+    <h3 class="latest">Be in the know on the latest ESG trends.
+    </h3>
+    </section>
+    <section class="footsection2">
+      <form method="post" class="formn" action="{% url 'agreement' %}">
+        {% csrf_token %}
+        <div class ="alert alert-danger" role="alert">
+          {{error}}
+        </div>
+     <input type="email" name="Email" class="input1"  style="width: 669px; height: 56px;"placeholder="info@2dlogistics.az">
+     <button class="btn btn-primary"  role="button" id="button7">SUBSCRIBE</button>
+    </form>
+    <div class="socials">
+      {% for i in social %}
+      
+      <a href="{{i.facebook}}" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href ="{{i.instagram}}" class="icons"><i class="fa-brands fa-instagram"></i></a>
+      <a href="{{i.linkedin}}" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="{{i.whatsapp}}" class="icons"><i class="fa-brands fa-whatsapp"></i></a>
+      {% endfor %}
+    </div> 
+    </section>
+    </footer>
+    </div>
+    
+</body>
+</html>

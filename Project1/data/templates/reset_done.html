@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete reset</title>
+    <link rel="stylesheet" href="{% static 'css/reset.complete.css' %}">
+</head>
+<body>
+    <div class="sectioner">
+    <header>
+        <h1>Şifrəniz yeniləndi ✅ </h1>
+        <p>Şifrəniz təyin edildi, "Daxil ol" butonuna basaraq davam edə bilərsiniz </p>
+        <span>
+        <a href="{% url 'login' %}" style="font-family: sans-serif;"> Daxil ol </a>
+    </span>
+    </header>
+</div>
+</body>
+</html>

@@ -1,0 +1,346 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+header{
+    height: 112px;
+    font-family: calc(worksans);
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.header2{
+    font-family: calc(worksans);
+    width: 1072px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#button{
+    width: 184px;
+    height: 48px;
+    margin-top: 10px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 0px;
+}
+
+
+.nav{
+    display: contents;
+}
+.qoshul{
+    width: 235px;
+}
+.nav-link{
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+}
+.nav-link:focus, .nav-link:hover{
+    color: #632d2da6;
+}
+
+.nav-item{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 21px 15px 7px;
+}
+.headpara{
+    font-family: calc(worksans);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 192px;
+    background-color: #B5B5B5;
+    align-items: center;
+    flex-direction: column;
+}
+.headpara2{
+    font-family: calc(worksans);
+    width: 1072px;
+}
+.hak{
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+}
+.our{
+    width: 1072px;
+    text-align: left;
+    display: flex;
+    align-self: center;
+    margin-bottom: 39px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+}
+.team{
+    display: flex;
+    width: 1072px;
+    align-self: center;
+    flex-wrap: wrap;
+    grid-gap: 0 32px;
+}
+.haqqinda{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1072px;
+    align-self: center;
+}
+.invest{
+    margin-top: 32px;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+.want{
+    font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+}
+.ESG{
+    width: 521px;
+    height: 240px;
+    margin-top: 16px;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 24px;
+}
+.image{
+width: 516.72px;
+height: 312px;
+margin-top: 32px;
+background: #D9D9D9;
+}
+.qara{
+    margin: 3rem 0 3rem;
+    position: relative;
+    border: black;
+    height: 2.5px;
+    background: black;
+    color: black;
+    width: 99.8%;
+    opacity: 1;
+}
+.ishciler{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    width: 1072px;
+}
+.ish{
+    width: max-content;
+    height: 292px;
+    background: #1974C5;
+    border-radius: 2px;
+    margin-bottom: 120px;
+}
+.man{ width: 160px;
+ height: 160px;
+ background: #D9D9D9;
+ border: 4px solid #FFFFFF;
+ margin: 32px 42px 0 42px;
+border-radius: 100px;
+}
+.social-media-links {
+
+width: 88px;
+height: 24px;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-self: center;
+margin-inline:auto ;
+margin-top: 40px;
+  }
+  .medi{
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+    margin: 1px 3px 3px 2.7px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .twitter{
+    width: 18px;
+    height: 16px;
+    align-items: center;
+  }.facebook{
+    width: 20px;
+    height: 18px;
+    align-items: center;
+  }.instagram{
+    width: 15px;
+    height: 16px;
+    align-items: center;
+  }
+  .person{
+    width: 244px;
+height: 80px;
+margin-top: 32px;
+background: #E9F4FF;
+  }
+.elc{
+    height: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #2E3131;
+    margin-top: 36px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+}
+.busi{
+padding-top: 2px;
+height: 24px;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #586268;
+}
+.selection{
+    display: flex;
+    justify-content: center;
+    color: #1974C5;
+    padding: 42px 0 49px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 70px;
+}
+.footer1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 295px;
+    background-color: #123E4E;
+    align-items: center;
+    flex-direction: column;
+    margin: 110px 0 0 0;
+}
+.latest{
+    color: white;
+    padding: 72px 0 32px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+}
+.footsection{
+    width: 1072px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+.footsection2{
+    width: 1072px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+}
+.input1{
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 4px;
+}
+#button4{
+    width: 166.92px;
+    height: 56px;
+    padding: 15px;
+    margin-left: 55%;
+    background-color: #1974C5;
+}
+#button5{
+    width: 166.92px;
+    height: 56px;
+    padding: 15px;
+    margin-left: 55%;
+    background-color: #1974C5;
+}
+#button6{
+    width: 166.92px;
+    height: 56px;
+    padding: 15px;
+    margin-left: 55%;
+    background-color: #1974C5;
+}
+#button7{
+    width: 166.92px;
+    height: 56px;
+    padding: 15px;
+    margin-left: 32px;
+    background-color: #1974C5;
+}
+.socials{
+    color: black;
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 75px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 6px 12px 0 0;
+    border-radius: 0px;
+    background-color: #1974C5;
+    color: white;
+    border: 0px solid;
+    padding: 20px 20px;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.icons:hover{
+    color: black;
+    background-color: #ffffff;
+    border: #1974C5;
+    transition: .5s;
+}
+.xett{
+    border: black;
+    height: 2.5px;
+    background: black;
+    color: black;
+    width: 100%;
+    opacity: 1;
+    margin: 2rem 0 2rem;
+}
+.axiri{
+    width: 1072px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+.formn{
+    display: contents;
+}

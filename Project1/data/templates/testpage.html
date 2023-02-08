@@ -1,0 +1,24 @@
+<h1>hepsi</h1>
+{% for i in wrk %}
+    {{i.name}} <br/>
+    <a href="{{i.image.url}}"/><br>
+    {{i.description}}<br>
+    {{i.date}}
+{% endfor %}
+<br>
+{% for i in wrk1 %}
+    {{i.name}} <br/>
+    {{i.slug}} <br>
+    <a href="{{i.image.url}}"/> <br>
+    {{i.description}}<br>
+{% endfor %}
+dev>
+<h1> hesabatlar</h1>
+{% for i in wrk1 %}
+    {{i.name}} <br/>
+    {{i.slug}} <br>
+    <a href="{{i.image.url}}"/> <br>
+
+{% endfor %}
+
+<dev/>
