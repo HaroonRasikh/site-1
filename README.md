@@ -1,0 +1,1 @@
+This site is related to a company that is used for solutions to customers’ data problems, so  that customers can be aware of the company's services and communicate with the company to use their services. 
